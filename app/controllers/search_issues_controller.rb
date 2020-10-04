@@ -3,7 +3,11 @@ class SearchIssuesController < ApplicationController
 
   include RedmineDidYouMean
 
-  before_filter :find_project, :get_query, :get_project_filter, :get_limit
+  if Rails::VERSION::MAJOR >= 5
+    before_action :find_project, :get_query, :get_project_filter, :get_limit
+  else
+    before_filter :find_project, :get_query, :get_project_filter, :get_limit
+  end
 
 
   def index

@@ -10,7 +10,12 @@ module TSMonkeyPatch
         return name == 'issue_core' && Setting.plugin_redmine_didyoumean['search_method'] != '1'
         perform_without_dym
       end
-      alias_method_chain :perform, :dym
+      if Rails::VERSION::MAJOR >= 5
+        alias_method :perform_without_dym, :perform
+        alias_method :perform, :perform_with_dym
+      else
+        alias_method_chain :perform, :dym
+      end
     end
   end
 end

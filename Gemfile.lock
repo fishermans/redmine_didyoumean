@@ -25,7 +25,7 @@ GEM
     method_source (0.8.2)
     middleware (0.1.0)
     minitest (5.14.1)
-    mysql2 (0.3.17)
+    mysql2 (0.5.0)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -52,7 +52,7 @@ DEPENDENCIES
   activerecord-jdbcmysql-adapter
   awesome_print
   hirb
-  mysql2 (~> 0.3.11)
+  mysql2 (~> 0.5.0)
   pry
-  rake (~> 12.3.3)
+  rake (~> 13.0.1)
   thinking-sphinx (~> 3.1.1)

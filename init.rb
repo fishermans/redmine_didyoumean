@@ -7,9 +7,10 @@ Redmine::Plugin.register :redmine_didyoumean do
   name 'Did You Mean?'
   author 'Alessandro Bahgat and Mattia Tommasone'
   description 'A plugin to search for duplicate issues before opening them.'
-  version '1.2.0'
+  version '1.2.1-SNAPSHOT'
   url 'http://www.github.com/abahgat/redmine_didyoumean'
   author_url 'http://abahgat.com/'
+  requires_redmine version_or_higher: '3.2'
 
   default_settings = {
     'show_only_open' => '1',
